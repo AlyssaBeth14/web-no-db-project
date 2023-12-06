@@ -1,27 +1,53 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 //import './BookCard.css'
+import axios from 'axios'
+import Cover from './Cover.jsx'
+import Title from './Title.jsx'
+import Author from './Author.jsx'
+import Rating from './Rating.jsx'
+import Genre from './Genre.jsx'
+import ModeButtons from './ModeButtons.jsx'
 
 const bookCard = (props) => {
+const{initialCardData, initialEditMode, deleteCard, currentData, setCurrentData} = props
 
+const [editMode, setIsEditing] = useState(initialEditMode)
+const [title, setTitle] = useState(initialCardData.title)
+const [author, setAuthor] = useState(initialCardData.author)
+const [rating, setRating] = useState(initialCardData.rating)
+const [genre, setGenre] = useState(initialCardData.genre)
+
+const changeEditMode = () => setIsEditing(true)
+const changeNormalMode = () => {
+  const bodyObj = {
+    title,
+    author,
+    rating,
+    genre
+  }
+
+  axios.put(`/book/${initialCardData.id}`, bodyObj)
+  .then((res) => {
+    setCurrentData(res.data)
+    setIsEditing(false)
+  })
+  .catch((theseHands) => {
+    console.log(theseHands);
+  })
+}
   }
 
   return (
-    <div>
-      <input img src="" id="cover"/>
-      <input id="title"/>
-      <input id="author"/>
-      <select id="rating">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-      <input id="genre"/>
-      <button onClick="">Edit</button>
-      <button onClick="">Delete</button>
-    </div>
+    <body>
+      
+      <Cover />
+      <Title />
+      <Author />
+      <Rating />
+      <Genre />
+      <ModeButtons />
+    </body>
   )
 
 
