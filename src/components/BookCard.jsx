@@ -40,13 +40,24 @@ const changeNormalMode = () => {
 
   return (
     <body>
-      
+      <>
       <Cover />
+      </>
+      <>
       <Title />
+      </>
+      <>
       <Author />
+      </>
+      <>
       <Rating />
+      </>
+      <>
       <Genre />
-      <ModeButtons />
+      </>
+     <>
+     <ModeButtons />
+     </>
     </body>
   )
 

@@ -1,8 +1,3 @@
-# React + Vite
+# Book Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Book Tracker is an app that keeps track of books you've read. The tracker allows you to display the cover, author, title, genre, and your own personal rating of any books you want to add to your list. Don't want a book on your list anymore? Delete it. Accidentally misspell the author's name? Edit the book at your leisure.
