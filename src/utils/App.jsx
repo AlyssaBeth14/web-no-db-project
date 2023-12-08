@@ -11,16 +11,17 @@ const books = [
     {id: 5, cover: `https://m.media-amazon.com/images/I/51Zd5my9pjL._AC_UF1000,1000_QL80_.jpg`, title: `The Kiss of a Stranger`, author: `Sarah M. Eden`, rating: 5, genre: `Regency Romance`}
   ]
 
+
 function App() {
   return (
 <body>
   <div>
-    <AddBook />
+    <AddBook addCard={addCard}/>
   </div>
   <div>
     <BookDisplay />
   </div>
-    <AddBook />
+    <AddBook addCard={addCard}/>
   </body>
   )
 }
