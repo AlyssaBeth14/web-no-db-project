@@ -19,7 +19,7 @@ const bookDisplay = (props) => {
   }, [])
 
 
-    const deleteCard = () => {
+    const deleteCard = (props) => {
       axios.delete(`/book/${id}`)
       .then((res) => {
         console.log(res.data);
@@ -41,7 +41,7 @@ const bookDisplay = (props) => {
     />)
   
   
-    const addCard = () => {
+    const addCard = (props) => {
       axios.post('/book', {})
       .then((res) => {
         console.log(res.data);

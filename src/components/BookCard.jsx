@@ -39,7 +39,7 @@ const changeNormalMode = () => {
   }
 
   return (
-    <body>
+    <div>
       <>
       <Cover />
       </>
@@ -55,10 +55,10 @@ const changeNormalMode = () => {
       <>
       <Genre />
       </>
-     <>
+      <>
      <ModeButtons />
-     </>
-    </body>
+      </>
+    </div>
   )
 
 
